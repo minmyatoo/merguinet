@@ -1,0 +1,15 @@
+#Conda Env အတွက်
+numpy
+scipy
+#tensorflow
+tensorflow-gpu
+keras
+ipython
+jupyter
+six
+wheel
+scikit-learn
+matplotlib
+opencv
+mlgill imutils
+tensorflow==1.15
