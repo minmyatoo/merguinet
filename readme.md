@@ -6,7 +6,7 @@
  
  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P225VLP_KhNpTwepDsWl8uG4i3zQJ7KZ?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Kpv0HZ4zmVfq9ExSDzntIHNx6z6tgJIT?usp=sharing)
 
 
  ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/test82.png)
