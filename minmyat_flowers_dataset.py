@@ -97,7 +97,7 @@ plot_model(model, to_file="merguinet.png", show_shapes=True)
 
 # model.save('merguimodel.hdf5')
 # Print Keys
- print(H.history)
+#print(H.history)
 
 
 # plot training loss and accuracy
