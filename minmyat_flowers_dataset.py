@@ -1,4 +1,3 @@
-# training of MiniVGG network on Flowers-17 data using Data Augmentation.
 # Windows
 # python minmyat_flowers_dataset.py --dataset flowers_dataset --output test.png
 # python minmyat_flowers_dataset.py --dataset flowers_dataset --output test3.png
@@ -101,10 +100,10 @@ print("[INFO] serializing network...")
 # plt.style.use("ggplot")
 plt.style.use("classic")
 plt.figure()
-plt.plot(np.arange(0, 110), H.history["loss"], label="train_loss")
-plt.plot(np.arange(0, 110), H.history["val_loss"], label="val_loss")
-plt.plot(np.arange(0, 110), H.history["acc"], label="train_acc")
-plt.plot(np.arange(0, 110), H.history["val_acc"], label="val_acc")
+plt.plot(np.arange(0, 100), H.history["loss"], label="train_loss")
+plt.plot(np.arange(0, 100), H.history["val_loss"], label="val_loss")
+plt.plot(np.arange(0, 100), H.history["acc"], label="train_acc")
+plt.plot(np.arange(0, 100), H.history["val_acc"], label="val_acc")
 plt.title("Training Loss and Accuracy")
 plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
