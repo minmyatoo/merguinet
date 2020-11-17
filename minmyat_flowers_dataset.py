@@ -10,6 +10,7 @@ from sklearn.metrics import classification_report
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import SGD
 from imutils import paths
+from keras.utils import plot_model
 
 # Local modules
 # https://github.com/CzJakethedog/preprocessing (BUlk lists of Preprocessing files)
@@ -91,9 +92,12 @@ print('Test accuracy:', score[1] * 100)
 print("[INFO] serializing network...")
 # model.save(args["model"])
 
+print("[INFO] printing plot model network...")
+plot_model(model, to_file="merguinet.png", show_shapes=True)
+
 # model.save('merguimodel.hdf5')
 # Print Keys
-# print(H.history)
+ print(H.history)
 
 
 # plot training loss and accuracy
