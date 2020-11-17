@@ -4,6 +4,11 @@
  - this model was customized from MiniVGG models.
  - The python libraries that used in the project. please check in **requirements.txt** 
  
+ 
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P225VLP_KhNpTwepDsWl8uG4i3zQJ7KZ?usp=sharing)
+
+
  ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/test82.png)
  
   ![](https://github.com/minmyatoo/merguinet/blob/master/img/82.png)
