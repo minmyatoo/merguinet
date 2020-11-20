@@ -1,7 +1,7 @@
  ## MerguiNet 
  
  - This project was created by Min Myat Oo for the final project of MCVT deep learning foundation class.
- - this model was customized from MiniVGG models.
+ - This model was customized from MiniVGG models.
  - The python libraries that used in the project. please check in **requirements.txt** 
  
  
@@ -12,6 +12,9 @@
  ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/test82.png)
  
   ![](https://github.com/minmyatoo/merguinet/blob/master/img/82.png)
+  
+    ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/merguinet.png)
+  
  
  For Windows environments...
  ```sh
