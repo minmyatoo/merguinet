@@ -13,7 +13,8 @@
  
   ![](https://github.com/minmyatoo/merguinet/blob/master/img/82.png)
   
-    ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/merguinet.png)
+  ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/merguinet.png)
+    
   
  
  For Windows environments...
