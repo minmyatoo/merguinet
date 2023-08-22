@@ -44,9 +44,10 @@ class SimpleDatasetLoader:
 
                 # Show an update every `verbose` images
                 if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
-                    logging.info("[INFO] processed {}/{}".format(i + 1, len(imagePaths)))
+                    logging.info("[INFO] Processed {}/{}".format(i + 1, len(imagePaths)))
 
             except Exception as e:
                 logging.error(f"[ERROR] Failed to load/process image: {imagePath}. Error: {e}")
+                continue  # Continue processing other images even if one fails
 
         return (np.array(data), np.array(labels))

@@ -1,38 +1,36 @@
- ## MerguiNet 
- 
- - This project was created by Min Myat Oo for the final project of MCVT deep learning foundation class.
- - This model was customized from MiniVGG models.
- - The python libraries that used in the project. please check in **requirements.txt** 
- 
- 
+## MerguiNet 🌼
+
+- **Creator:** Min Myat Oo
+- **Project:** Final project for MCVT Deep Learning Foundation Class
+- **Model:** Customized MiniVGG-based model
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1CoYl1dZUnxtkNRxVYl9j9IhUjCqrFvw4?usp=sharing)
 
+![Test Image 1](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/test82.png)
+![Test Image 2](https://github.com/minmyatoo/merguinet/blob/master/img/82.png)
+![Model Architecture](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/merguinet.png)
 
- ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/test82.png)
- 
-  ![](https://github.com/minmyatoo/merguinet/blob/master/img/82.png)
-  
-    ![](https://raw.githubusercontent.com/minmyatoo/merguinet/master/img/merguinet.png)
-  
- 
- For Windows environments...
- ```sh
- # python minmyat_flowers_dataset.py --dataset flowers_dataset --output test.png
- ```
- For Google Colab environments...
-  ```sh
+For Windows environments...
+```sh
+# Run the script
+python minmyat_flowers_dataset.py --dataset flowers_dataset --output test.png
+```
+
+For Google Colab environments...
+```sh
+# Clone the repository
 !git clone -l -s git://github.com/minmyatoo/merguinet.git cloned-repo
 %cd cloned-repo
+
+# Run the script
 !python minmyat_flowers_dataset.py --dataset flowers_dataset --output test.png
 !ls
- ```
+```
 
+Thank you for your kindness! 🙏
 
- Thank your kindness -_-
- 
- | Credit | Sites |
-| ------ | ------ |
-| Scikit-learn | [https://scikit-learn.org/stable/][Plsl] |
-| Preprocessing | [https://github.com/CzJakethedog/preprocessing][PlPP] |
-| Google | [https://www.google.com][PlGG] |
+| Credit       | Sites                                   |
+| ------------ | --------------------------------------- |
+| Scikit-learn | [https://scikit-learn.org/stable/](https://scikit-learn.org/stable/) |
+| Preprocessing | [https://github.com/CzJakethedog/preprocessing](https://github.com/CzJakethedog/preprocessing) |
+| Google       | [https://www.google.com](https://www.google.com) |
