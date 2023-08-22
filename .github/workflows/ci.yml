@@ -3,7 +3,7 @@ name: Run minmyat_flowers_dataset
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   run-script:
