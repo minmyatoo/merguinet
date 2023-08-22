@@ -2,7 +2,6 @@
 numpy
 scipy
 #tensorflow
-tensorflow-gpu
 keras
 ipython
 jupyter
@@ -12,4 +11,4 @@ scikit-learn
 matplotlib
 opencv
 mlgill imutils
-tensorflow==1.15
+tensorflow

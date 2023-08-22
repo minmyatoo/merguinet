@@ -1,47 +1,52 @@
-# import the necessary packages
 import numpy as np
 import cv2
 import os
+import logging
 
 class SimpleDatasetLoader:
-	def __init__(self, preprocessors=None):
-		# store the image preprocessor
-		self.preprocessors = preprocessors
+    def __init__(self, preprocessors=None):
+        """
+        Initialize the SimpleDatasetLoader.
 
-		# if the preprocessors are None, initialize them as an
-		# empty list
-		if self.preprocessors is None:
-			self.preprocessors = []
+        Args:
+            preprocessors (list, optional): A list of image preprocessors. Defaults to None.
+        """
+        self.preprocessors = preprocessors if preprocessors else []
 
-	def load(self, imagePaths, verbose=-1):
-		# initialize the list of features and labels
-		data = []
-		labels = []
+    def load(self, imagePaths, verbose=-1):
+        """
+        Load images from file paths and apply preprocessors.
 
-		# loop over the input images
-		for (i, imagePath) in enumerate(imagePaths):
-			# load the image and extract the class label assuming
-			# that our path has the following format:
-			# /path/to/dataset/{class}/{image}.jpg
-			image = cv2.imread(imagePath)
-			label = imagePath.split(os.path.sep)[-2]
+        Args:
+            imagePaths (list): A list of file paths to images.
+            verbose (int, optional): Verbosity level. Defaults to -1.
 
-			# check to see if our preprocessors are not None
-			if self.preprocessors is not None:
-				# loop over the preprocessors and apply each to
-				# the image
-				for p in self.preprocessors:
-					image = p.preprocess(image)
+        Returns:
+            tuple: A tuple containing NumPy arrays for data (images) and labels.
+        """
+        data = []
+        labels = []
 
-			# treat our processed image as a "feature vector"
-			# by updating the data list followed by the labels
-			data.append(image)
-			labels.append(label)
+        for (i, imagePath) in enumerate(imagePaths):
+            try:
+                # Load the image and extract the class label assuming the path format:
+                # /path/to/dataset/{class}/{image}.jpg
+                image = cv2.imread(imagePath)
+                label = os.path.basename(os.path.dirname(imagePath))
 
-			# show an update every `verbose` images
-			if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
-				print("[INFO] processed {}/{}".format(i + 1,
-					len(imagePaths)))
+                # Apply preprocessors
+                for p in self.preprocessors:
+                    image = p.preprocess(image)
 
-		# return a tuple of the data and labels
-		return (np.array(data), np.array(labels))
+                # Append the processed image to data and label to labels
+                data.append(image)
+                labels.append(label)
+
+                # Show an update every `verbose` images
+                if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
+                    logging.info("[INFO] processed {}/{}".format(i + 1, len(imagePaths)))
+
+            except Exception as e:
+                logging.error(f"[ERROR] Failed to load/process image: {imagePath}. Error: {e}")
+
+        return (np.array(data), np.array(labels))
