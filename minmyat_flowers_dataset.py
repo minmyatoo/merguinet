@@ -67,7 +67,7 @@ def main():
     # 🚀 Train network
     print('[INFO] 🌟 Training network ...')
     H = model.fit(aug.flow(trainX, trainY, batch_size=32), validation_data=(testX, testY),
-                            steps_per_epoch=len(trainX) // 32, epochs=100, verbose=1)
+                            steps_per_epoch=len(trainX) // 32, epochs=10, verbose=1)
 
     # 📊 Evaluate the model
     print('[INFO] Evaluating the network ...')
